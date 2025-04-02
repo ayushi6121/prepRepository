@@ -8,8 +8,10 @@ public class Employee {
 	private int joiningYear;
 	private double salary;
 	private String dateOfBirth;
+	public int id;
 	
-	public Employee(String firstName, String lastName, String department, int joiningYear, double salary, String dateOfBirth) {
+	public Employee(String firstName, String lastName, String department, int joiningYear, 
+			double salary, String dateOfBirth, int id) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -17,6 +19,7 @@ public class Employee {
 		this.joiningYear = joiningYear;
 		this.salary=salary;
 		this.dateOfBirth=dateOfBirth;
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -46,11 +49,16 @@ public class Employee {
 	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
+	
+	public int getId() {
+		return id;
+	}
 
 	@Override
 	public String toString() {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department
-				+ ", joiningYear=" + joiningYear + ", salary=" + salary  + ", dateOfBirth=" + dateOfBirth + "]";
+				+ ", joiningYear=" + joiningYear + ", salary=" + salary  + ", dateOfBirth=" + dateOfBirth + 
+				"id=" + id +"]";
 	}
 	
 }
